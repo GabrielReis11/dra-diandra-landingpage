@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap');*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: #ece3da;
+$secondary-color: #c38c63;
+$terciary-color: #889577;
+
+$font-family-general: "Poppins", sans-serif;
+$font-family-title: "Playfair Display", serif;
+html {
+  scroll-behavior: smooth;
+}
+main {
+  overflow-x: hidden;
+  position: relative; // Garante o empilhamento correto
+}
+
+#sobre-mim,
+#atuacao,
+#abordagem,
+#depoimentos,
+#agendamento {
+  scroll-margin-top: 80px;
+}
+.navbar{
+  background-color: $primary-color;
+  .nav-link{
+    color: $terciary-color;
+    font-family: $font-family-general;
+    font-weight: 300;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+    &:hover{
+      background-color: $terciary-color;
+      color:$primary-color;
+    }
+  }
+}
+
+// ATUALIZE ESTA LINHA para incluir os novos pesos (200 e 500)
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+#hero {
+  position: relative; // Contexto para o wrapper de fundo
+  overflow: hidden;   // Previne scroll
+
+  // Wrapper do CONTEÚDO (fica na frente)
+  .hero-content-container {
+    position: relative;
+    z-index: 2; // Na frente do fundo
+  }
+
+  // Bloco de texto (dentro do .col-lg-7 do container)
+  .hero-content {
+    color: #ffffff; // Texto claro
+    padding: 3rem 0; // Padding vertical, sem padding horizontal (o container cuida disso)
+
+    // ... (Copie todas as regras de fonte/cor que já fizemos) ...
+    .hero-subtitle {
+      font-family: $font-family-general;
+      font-size: 36px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .hero-title {
+      font-family: $font-family-title;
+      font-size: 48px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-info, .hero-tagline {
+      font-family: $font-family-general;
+      font-size: 24px;
+      font-weight: 200;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .hero-info { margin-bottom: 1.5rem; }
+    .hero-tagline { margin-bottom: 2rem; }
+
+    .btn-hero {
+      background-color: $secondary-color;
+      color: $primary-color;
+      font-family: $font-family-general;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      transition: 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      max-width: 250px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Wrapper dos FUNDOS (fica atrás)
+  .hero-background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; // Atrás do conteúdo
+  }
+
+  // O div do fundo verde
+  .hero-bg-green {
+    background-color: $terciary-color; // Verde
+    background-image: url('../../img/bg-logo-hero.png'); // Logo sutil
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  // O div da foto
+  .hero-bg-image {
+    background-image: url('../../img/bg-diandra.png'); // Foto da Doutora
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  // --- Responsividade ---
+  @media (max-width: 991.98px) {
+
+    // No mobile, a foto de fundo SOME
+    .hero-bg-image {
+      display: none;
+    }
+
+    // O .col-lg-7 do fundo verde vira col-12 automaticamente
+    // O .col-lg-7 do conteúdo vira col-12 automaticamente
+
+    // O conteúdo de texto
+    .hero-content {
+      text-align: center; // Centraliza
+
+      .btn-hero {
+        margin: 0 auto; // Centraliza o botão
+      }
+    }
+  }
+}
+
+#cta{
+  .card{
+    background-color: $primary-color;
+    border: 1px solid $terciary-color;
+    border-radius: 8px;
+    .card-body{
+      padding: 2rem 2rem;
+      text-align: center;
+      .card-title{
+        font-family: $font-family-title;
+        font-size: 36px;
+        color:  $terciary-color;
+        margin-bottom: 1rem;
+      }
+      .card-text{
+        font-family: $font-family-general;
+        font-size: 24px;
+        color:  $terciary-color;
+        margin-bottom: 1rem;
+      }
+      .btn{
+        background-color: $terciary-color;
+        color:  $primary-color;
+        font-family: $font-family-general;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 0.75rem 1.5rem;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        &:hover{
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(129,73,40,0.12);
+        }
+      }
+    }
+  }
+}
+
+// ===============================================
+// SEÇÃO ATUAÇÃO (ESPECIALIDADES) - NOVO ESTILO
+// ===============================================
+
+// Estilos gerais para os títulos das secções
+.section-subtitle {
+  font-family: $font-family-general;
+  color: $secondary-color; // Tom de bege/marrom
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: $font-family-title;
+  color: $terciary-color; // Tom de verde
+  font-size: 2.5rem; // 40px
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#atuacao {
+  position: relative; // Para o overlay
+  min-height: 80vh;
+  // Fundo com imagem e overlay verde
+  background-image: url('../../img/bg-especialidades.png');
+  background-size: cover;
+  background-position: center;
+
+  // Sobrescreve as cores dos títulos para esta seção
+  .section-subtitle, .section-title {
+    color: $primary-color; // Cor bege clara
+    opacity: 0.9;
+  }
+
+  .section-title {
+    color: #fff; // Branco puro para o título principal
+    opacity: 1;
+  }
+
+  // Novo card de descrição (direita)
+  .card-descricao {
+    background-color: #fff; // Fundo branco
+    border: 2px solid $terciary-color;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .card-descricao-title {
+      font-family: $font-family-title;
+      font-size: 2rem;
+      color: $secondary-color; // Verde
+      margin-bottom: 1rem;
+      text-align: center;
+
+    }
+
+    .card-descricao-text {
+      font-family: $font-family-general;
+      font-size: 1.1rem;
+      color: $secondary-color; // Verde
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .btn{
+      background-color: $terciary-color;
+      color: #ffffff;
+      font-family: $font-family-general;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(129,73,40,0.12);
+      }
+    }
+  }
+
+  // Novo card de especialidade (esquerda)
+  .especialidade-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .especialidade-icon {
+      height: 40px;
+      width: auto;
+      margin-right: 1.25rem;
+      // Filtro para trocar a cor do ícone (se for PNG preto) para verde
+      // filter: invert(41%) sepia(10%) saturate(1315%) hue-rotate(62deg) brightness(91%) contrast(85%);
+      // ^ Isso é complicado. É melhor exportar os ícones na cor $terciary-color
+    }
+
+    .especialidade-label {
+      font-family: $font-family-general;
+      color: $terciary-color; // Verde
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0;
+    }
+  }
+}
+
+// ===============================================
+// SEÇÃO SOBRE MIM (Dra. Diandra) - NOVO ESTILO
+// ===============================================
+
+#sobre-mim {
+  position: relative; // Necessário para o fundo angular
+  background-color: $primary-color; // Fundo bege claro da seção
+  overflow: hidden; // Previne que elementos vazem
+  min-height: 75vh;
+  // O container precisa ficar na frente do fundo
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Fundo Verde Angular
+  .angled-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-color: $terciary-color; // Verde
+    z-index: 1; // Fica atrás do .container
+
+    // A mágica do ângulo acontece aqui com clip-path
+    // Você pode ajustar o valor '20%' para mudar a inclinação
+    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);  }
+
+  // Conteúdo de texto da esquerda
+  .sobremim-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .sobremim-subtitle {
+      font-family: $font-family-general; // Poppins
+      font-size: 2rem;
+      font-weight: 500;
+      color: $terciary-color; // Verde
+    }
+
+    .sobremim-title {
+      font-family: $font-family-general; // Playfair
+      font-size: 3rem;
+      font-weight: 600;
+      color: $terciary-color; // Verde
+      margin-bottom: 2.5rem;
+    }
+
+    // Lista de formação (o texto é claro pois fica sobre o fundo verde)
+    .sobremim-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 3rem;
+      li {
+        font-family: $font-family-general; // Poppins
+        font-size: 1.5rem;
+        line-height: 1.7;
+        padding-left: 1.5rem;
+        position: relative;
+        color: $primary-color; // Texto bege claro
+
+        // Adiciona o bullet '•' personalizado
+        &::before {
+          content: '•';
+          color: $primary-color;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  // Foto da direita
+  .img-sobremim {
+    border-radius: 12px;
+  }
+
+  // --- Responsividade ---
+  @media (max-width: 991.98px) {
+
+    // No mobile, o ângulo fica menos acentuado
+    .angled-background {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      height: 100%;
+    }
+
+    .sobremim-content {
+      margin-bottom: 3rem; // Espaço entre o texto e a foto
+      text-align: center;
+      display: inline-block;
+      .sobremim-subtitle {
+        color: $primary-color; // Verde
+      }
+
+      .sobremim-title {
+        color: $primary-color; // Verde
+      }
+      .sobremim-list li {
+        text-align: left; // Alinha o texto da lista à esquerda
+      }
+    }
+  }
+}
+
+// ===============================================
+// SEÇÃO AGENDAMENTO (LOCAIS)
+// ===============================================
+
+#agendamento {
+  position: relative; // MANTENHA ESTA LINHA
+  // Mesmo fundo sutil da seção #atuacao
+  background-color: white;
+  background-image: url('../../img/bg-logo-atendimento.png');
+  background-size: cover; // Faz a imagem cobrir toda a seção
+  background-position: center center; // Centraliza a imagem
+  background-repeat: no-repeat; // Evita que a imagem se repita
+
+  // Título da Cidade (Aracaju, Salvador)
+  .cidade-title {
+    font-family: $font-family-title;
+    color: $terciary-color;
+    font-size: 2rem; // 32px
+    font-weight: 600;
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 0.5rem;
+    display: inline-block; // Para a borda não ocupar a linha toda
+  }
+
+  // Card do Local
+  .local-card {
+    background-color: #fff;            // <-- VOLTOU PARA CÁ
+    border: 1px solid $terciary-color;  // <-- VOLTOU PARA CÁ
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(129, 73, 40, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden; // <-- REMOVIDO (não é mais necessário)
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(129, 73, 40, 0.12);
+    }
+
+    .local-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      // Ajuste para a borda do card
+      border-top-left-radius: 7px;    // <-- ADICIONADO DE VOLTA
+      border-top-right-radius: 7px;   // <-- ADICIONADO DE VOLTA
+    }
+
+    .local-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+    }
+
+    .local-card-title {
+      font-family: $font-family-title;
+      font-size: 1.5rem; // 24px
+      color: $terciary-color;
+      margin-bottom: 1rem;
+    }
+
+    .local-card-info {
+      font-family: $font-family-general;
+      color: $secondary-color;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+      display: flex; // Para alinhar o ícone com o texto
+      align-items: flex-start;
+
+      i {
+        margin-top: 3px; // Alinha o ícone verticalmente
+        color: $terciary-color;
+      }
+    }
+
+    .local-card-buttons {
+      margin-top: auto; // Empurra os botões para o final do card
+      padding-top: 1rem; // Espaço antes dos botões
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    // Classe base para os botões dos cards
+    .btn-local {
+      font-family: $font-family-general;
+      font-weight: 600;
+      font-size: 0.85rem; // Botões menores que o .btn principal
+      border-radius: 6px;
+      padding: 0.6rem 0.5rem; // Padding menor
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid $terciary-color;
+    }
+
+    // Botão Primário (Preenchido)
+    .btn-local-primary {
+      background-color: $terciary-color;
+      color: $primary-color;
+
+      &:hover {
+        background-color: darken($terciary-color, 5%);
+        color: #fff;
+      }
+    }
+
+    // Botão Secundário (Vazado)
+    .btn-local-secondary {
+      background-color: transparent;
+      color: $terciary-color;
+
+      &:hover {
+        background-color: $terciary-color;
+        color: $primary-color;
+      }
+    }
+  }
+
+  // Círculo da Esquerda
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1; // Fica atrás do .container
+    width: 250px;  // Ajuste o tamanho conforme desejar
+    height: 250px; // Ajuste o tamanho conforme desejar
+    background-color: $terciary-color; // A cor marrom
+    border-radius: 50%;
+
+    // Posicionamento (ex: meio da tela, metade para fora)
+    top: 30%;
+    left: -125px; // Metade da largura para fora
+    transform: translateY(-50%); // Centraliza verticalmente
+  }
+
+  // Círculo da Direita
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1; // Fica atrás do .container
+    width: 250px;  // Ajuste o tamanho conforme desejar
+    height: 250px; // Ajuste o tamanho conforme desejar
+    background-color: $terciary-color; // A cor marrom
+    border-radius: 50%;
+
+    // Posicionamento (ex: meio da tela, metade para fora)
+    top: 70%;
+    right: -125px; // Metade da largura para fora
+    transform: translateY(-50%); // Centraliza verticalmente
+  }
+}
+
+
+// ===============================================
+// SEÇÃO DEPOIMENTOS (COM CORREÇÕES FINAIS)
+// ===============================================
+
+#depoimentos {
+  background-color: $primary-color;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+
+  .depoimentos-title {
+    font-family: $font-family-title;
+    font-size: 2.5rem;
+    color: $terciary-color;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  .depoimentos-text {
+    font-family: $font-family-general;
+    font-size: 1.1rem;
+    color: $secondary-color;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  // Novo estilo para o link "Agende sua consulta"
+  .link-agendamento {
+    font-family: $font-family-general;
+    font-weight: 600;
+    font-size: 1rem;
+    color: $secondary-color; // Cor do texto
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    padding: 8px 16px;
+    i {
+      color: $terciary-color; // Cor do ícone
+    }
+
+    &:hover {
+      color: $terciary-color;
+    }
+  }
+
+  // --- Garantia de altura para o Owl Carousel ---
+  .owl-stage {
+    display: flex;
+  }
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+  }
+  .item {
+    height: 100%;
+    width: 100%;
+  }
+
+  // --- Estilos do Card de Depoimento (VERSÃO CORRIGIDA) ---
+  .testimonial-card {
+    background-color: #F9F4F2;
+    border: 1px solid $terciary-color;
+    border-radius: 12px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Ocupa a altura do .item
+    width: 100%;
+
+    .card-header {
+      font-family: $font-family-general;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $terciary-color;
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      border-bottom: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-header-logo {
+      height: 24px;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    .card-body {
+      padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+      // border-bottom: none; // <-- REMOVIDO DAQUI
+
+      // ===============================================
+      // CORREÇÃO 1: ALTURA UNIFORME
+      // ===============================================
+      flex-grow: 1; // <-- ESTA É A CORREÇÃO PRINCIPAL
+      // Isso faz o .card-body crescer, empurrando o .card-author para o fundo
+    }
+
+    .quote-icon {
+
+      color: $terciary-color;
+    }
+
+    .card-text {
+      font-family: $font-family-general;
+      font-size: 1rem;
+      color: $secondary-color;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .card-author {
+      background-color: transparent;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 2.5rem;
+        color: $terciary-color;
+      }
+
+      div {
+        font-family: $font-family-general;
+        line-height: 1.4;
+
+        strong {
+          display: block;
+          color: $terciary-color;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        span {
+          display: block;
+          color: $secondary-color;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  // --- Estilos do Owl Carousel Dots (Corrigido e Simplificado) ---
+  .owl-dots {
+    text-align: center;
+    padding-top: 2rem;
+
+    .owl-dot {
+      // Este é o botão. Vamos estilizá-lo DIRETAMENTE.
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+
+      background: $secondary-color; // Nossa cor inativa
+      opacity: 0.5;
+      transition: all 0.3s ease;
+
+      // O tema padrão põe um 'span' dentro. Vamos escondê-lo.
+      span {
+        display: none;
+      }
+
+      // Estilo do botão ATIVO
+      &.active {
+        background: $terciary-color; // Nossa cor ativa
+        opacity: 1;
+        width: 12px; // Ativo fica maior
+        height: 12px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
