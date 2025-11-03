@@ -351,12 +351,11 @@ main {
 }
 
 #agendamento {
+  background-color: #ece3da;
+}
+#agendamento .container {
   position: relative;
-  background-color: white;
-  background-image: url("../../img/bg-logo-atendimento.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  z-index: 2;
 }
 #agendamento .cidade-title {
   font-family: "Playfair Display", serif;
@@ -368,41 +367,55 @@ main {
   display: inline-block;
 }
 #agendamento .local-card {
-  background-color: #fff;
-  border: 1px solid #889577;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(129, 73, 40, 0.08);
+  background-color: #889577;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 #agendamento .local-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(129, 73, 40, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+#agendamento .local-card .local-card-img-wrapper {
+  flex: 0 0 40%;
+  padding: 1rem;
+}
+@media (max-width: 767.98px) {
+  #agendamento .local-card .local-card-img-wrapper {
+    display: block;
+    padding: 0;
+  }
 }
 #agendamento .local-card .local-card-img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-radius: 8px;
+}
+@media (max-width: 767.98px) {
+  #agendamento .local-card .local-card-img {
+    border-radius: 0;
+  }
 }
 #agendamento .local-card .local-card-body {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  flex: 0 0 60%;
 }
 #agendamento .local-card .local-card-title {
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
-  color: #889577;
+  color: #fff;
   margin-bottom: 1rem;
 }
 #agendamento .local-card .local-card-info {
   font-family: "Poppins", sans-serif;
-  color: #c38c63;
+  color: #ece3da;
   font-size: 0.9rem;
   line-height: 1.5;
   margin-bottom: 0.75rem;
@@ -411,65 +424,40 @@ main {
 }
 #agendamento .local-card .local-card-info i {
   margin-top: 3px;
-  color: #889577;
+  color: #ece3da;
 }
 #agendamento .local-card .local-card-buttons {
   margin-top: auto;
   padding-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 0.5rem;
 }
 #agendamento .local-card .btn-local {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
-  border-radius: 6px;
-  padding: 0.6rem 0.5rem;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid #889577;
+  border: 1px solid #c38c63;
 }
 #agendamento .local-card .btn-local-primary {
-  background-color: #889577;
+  background-color: #c38c63;
   color: #ece3da;
 }
 #agendamento .local-card .btn-local-primary:hover {
-  background-color: rgb(123.2541322314, 136.2809917355, 106.2190082645);
-  color: #fff;
+  background-color: #bc7e51;
+  border-color: #bc7e51;
 }
 #agendamento .local-card .btn-local-secondary {
   background-color: transparent;
-  color: #889577;
+  color: #c38c63;
 }
 #agendamento .local-card .btn-local-secondary:hover {
-  background-color: #889577;
+  background-color: #c38c63;
   color: #ece3da;
-}
-#agendamento::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 250px;
-  height: 250px;
-  background-color: #889577;
-  border-radius: 50%;
-  top: 30%;
-  left: -125px;
-  transform: translateY(-50%);
-}
-#agendamento::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 250px;
-  height: 250px;
-  background-color: #889577;
-  border-radius: 50%;
-  top: 70%;
-  right: -125px;
-  transform: translateY(-50%);
 }
 
 #depoimentos {

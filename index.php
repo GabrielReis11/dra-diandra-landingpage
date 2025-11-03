@@ -187,10 +187,10 @@
                 </div>
             </div>
         </section>
-        <section id="agendamento" class="py-5">
+        <section id="agendamento" class="py-5 py-md-6">
             <div class="container">
 
-                <div class="row mb-4">
+                <div class="row mb-5">
                     <div class="col-12 text-center">
                         <h3 class="section-subtitle">Locais de Atendimento</h3>
                         <h2 class="section-title">Encontre o consultório mais próximo e<br>tenha cuidado especializado ao seu alcance.</h2>
@@ -205,32 +205,37 @@
 
                 <div class="row mb-4">
                     <?php foreach ($locais_aracaju as $local): ?>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="local-card">
-                                <img src="img/locais-atendimento/aracaju/<?= htmlspecialchars($local['img']) ?>"
-                                     alt="<?= htmlspecialchars($local['alt']) ?>" class="local-card-img">
-                                <div class="local-card-body">
-                                    <h5 class="local-card-title"><?= htmlspecialchars($local['titulo']) ?></h5>
-                                    <p class="local-card-info">
-                                        <i class="bi bi-geo-alt-fill me-2"></i><?= htmlspecialchars($local['endereco']) ?>
-                                    </p>
-                                    <p class="local-card-info">
-                                        <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($local['telefone']) ?>
-                                    </p>
-                                    <div class="local-card-buttons">
-                                        <a href="https://wa.me/+557197103059" target="_blank" class="btn-local btn-local-primary">Agende sua consulta</a>
+                        <div class="col-lg-6 mb-4">
 
-                                        <?php
-                                        // Só exibe o botão se o ID não for 'horizonte'
-                                        if ($local['id'] != 'horizonte'):
-                                            ?>
-                                            <a href="#" class="btn-local btn-local-secondary"
-                                               data-bs-toggle="modal"
-                                               data-bs-target="#modal-<?= htmlspecialchars($local['id']) ?>">
-                                                Consultar convênios
-                                            </a>
-                                        <?php endif; ?>
+                            <div class="card local-card h-100">
+                                <div class="row g-0 h-100">
 
+                                    <div class="col-md-5 local-card-img-wrapper">
+                                        <img src="img/locais-atendimento/aracaju/<?= htmlspecialchars($local['img']) ?>"
+                                             alt="<?= htmlspecialchars($local['alt']) ?>" class="img-fluid local-card-img">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="card-body local-card-body">
+                                            <h5 class="local-card-title"><?= htmlspecialchars($local['titulo']) ?></h5>
+                                            <p class="local-card-info">
+                                                <i class="bi bi-geo-alt-fill me-2"></i><?= htmlspecialchars($local['endereco']) ?>
+                                            </p>
+                                            <p class="local-card-info">
+                                                <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($local['telefone']) ?>
+                                            </p>
+                                            <div class="local-card-buttons">
+                                                <a href="https://wa.me/557197103059" target="_blank" class="btn-local btn-local-primary">Agende sua consulta</a>
+
+                                                <?php if ($local['id'] != 'horizonte'): ?>
+                                                    <a href="#" class="btn-local btn-local-secondary"
+                                                       data-bs-toggle="modal"
+                                                       data-bs-target="#modal-<?= htmlspecialchars($local['id']) ?>">
+                                                        Consultar convênios
+                                                    </a>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -245,30 +250,36 @@
                 </div>
 
                 <div class="row">
-                    <?php
-                    // Loop para os locais de Salvador (usa $locais_salvador)
-                    foreach ($locais_salvador as $local):
-                        ?>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="local-card">
-                                <img src="img/locais-atendimento/salvador/<?= htmlspecialchars($local['img']) ?>"
-                                     alt="<?= htmlspecialchars($local['alt']) ?>" class="local-card-img">
-                                <div class="local-card-body">
-                                    <h5 class="local-card-title"><?= htmlspecialchars($local['titulo']) ?></h5>
-                                    <p class="local-card-info">
-                                        <i class="bi bi-geo-alt-fill me-2"></i><?= htmlspecialchars($local['endereco']) ?>
-                                    </p>
-                                    <p class="local-card-info">
-                                        <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($local['telefone']) ?>
-                                    </p>
-                                    <div class="local-card-buttons">
-                                        <a href="https://wa.me/+557197103059" target="_blank" class="btn-local btn-local-primary">Agende sua consulta</a>
+                    <?php foreach ($locais_salvador as $local): ?>
+                        <div class="col-lg-6 mb-4">
 
-                                        <a href="#" class="btn-local btn-local-secondary"
-                                           data-bs-toggle="modal"
-                                           data-bs-target="#modal-<?= htmlspecialchars($local['id']) ?>">
-                                            Consultar convênios
-                                        </a>
+                            <div class="card local-card h-100">
+                                <div class="row g-0 h-100">
+
+                                    <div class="col-md-5 local-card-img-wrapper">
+                                        <img src="img/locais-atendimento/salvador/<?= htmlspecialchars($local['img']) ?>"
+                                             alt="<?= htmlspecialchars($local['alt']) ?>" class="img-fluid local-card-img">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="card-body local-card-body">
+                                            <h5 class="local-card-title"><?= htmlspecialchars($local['titulo']) ?></h5>
+                                            <p class="local-card-info">
+                                                <i class="bi bi-geo-alt-fill me-2"></i><?= htmlspecialchars($local['endereco']) ?>
+                                            </p>
+                                            <p class="local-card-info">
+                                                <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($local['telefone']) ?>
+                                            </p>
+                                            <div class="local-card-buttons">
+                                                <a href="https://wa.me/557197103059" target="_blank" class="btn-local btn-local-primary">Agende sua consulta</a>
+
+                                                <a href="#" class="btn-local btn-local-secondary"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#modal-<?= htmlspecialchars($local['id']) ?>">
+                                                    Consultar convênios
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

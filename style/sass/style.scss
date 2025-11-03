@@ -429,159 +429,138 @@ main {
 }
 
 // ===============================================
-// SEÇÃO AGENDAMENTO (LOCAIS)
+// SEÇÃO AGENDAMENTO (LOCAIS) - NOVO ESTILO
 // ===============================================
 
 #agendamento {
-  position: relative; // MANTENHA ESTA LINHA
-  // Mesmo fundo sutil da seção #atuacao
-  background-color: white;
-  background-image: url('../../img/bg-logo-atendimento.png');
-  background-size: cover; // Faz a imagem cobrir toda a seção
-  background-position: center center; // Centraliza a imagem
-  background-repeat: no-repeat; // Evita que a imagem se repita
+  background-color: $primary-color; // Fundo bege claro
+  // Removemos a imagem de fundo e os círculos laterais
+  // para um visual mais limpo, como o da imagem.
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
 
   // Título da Cidade (Aracaju, Salvador)
   .cidade-title {
     font-family: $font-family-title;
-    color: $terciary-color;
-    font-size: 2rem; // 32px
+    color: $terciary-color; // Verde
+    font-size: 2rem;
     font-weight: 600;
-    border-bottom: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color; // Marrom-bege
     padding-bottom: 0.5rem;
-    display: inline-block; // Para a borda não ocupar a linha toda
+    display: inline-block;
   }
 
-  // Card do Local
+  // Card do Local (Novo Estilo)
   .local-card {
-    background-color: #fff;            // <-- VOLTOU PARA CÁ
-    border: 1px solid $terciary-color;  // <-- VOLTOU PARA CÁ
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(129, 73, 40, 0.08);
+    background-color: $terciary-color; // Fundo verde
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    // overflow: hidden; // <-- REMOVIDO (não é mais necessário)
+    display: flex; // Layout horizontal
+    overflow: hidden;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(129, 73, 40, 0.12);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    // Wrapper da imagem (esquerda)
+    .local-card-img-wrapper {
+      flex: 0 0 40%; // Ocupa 40% da largura
+      padding: 1rem; // Espaçamento para a imagem
+      @media (max-width: 767.98px) { // Breakpoint 'md' do Bootstrap
+        display: block; // No mobile, volta a ser um bloco normal
+        padding: 0;     // Remove o padding no mobile
+      }
     }
 
     .local-card-img {
       width: 100%;
-      height: 200px;
+      height: 100%; // Ocupa 100% da altura do wrapper
       object-fit: cover;
-      // Ajuste para a borda do card
-      border-top-left-radius: 7px;    // <-- ADICIONADO DE VOLTA
-      border-top-right-radius: 7px;   // <-- ADICIONADO DE VOLTA
+      border-radius: 8px; // Borda arredondada na imagem
+      @media (max-width: 767.98px) {
+        border-radius: 0; // Remove a borda no mobile
+        // A imagem vai se ajustar ao 'border-radius' do card pai
+      }
     }
 
+    // Corpo do card (direita)
     .local-card-body {
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-
+      flex: 0 0 60%; // Ocupa 60% da largura
     }
 
     .local-card-title {
       font-family: $font-family-title;
-      font-size: 1.5rem; // 24px
-      color: $terciary-color;
+      font-size: 1.5rem;
+      color: #fff; // Texto branco
       margin-bottom: 1rem;
     }
 
     .local-card-info {
       font-family: $font-family-general;
-      color: $secondary-color;
+      color: $primary-color; // Texto bege claro
       font-size: 0.9rem;
       line-height: 1.5;
       margin-bottom: 0.75rem;
-      display: flex; // Para alinhar o ícone com o texto
+      display: flex;
       align-items: flex-start;
 
       i {
-        margin-top: 3px; // Alinha o ícone verticalmente
-        color: $terciary-color;
+        margin-top: 3px;
+        color: $primary-color; // Ícone bege claro
       }
     }
 
     .local-card-buttons {
-      margin-top: auto; // Empurra os botões para o final do card
-      padding-top: 1rem; // Espaço antes dos botões
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      margin-top: auto;
+      padding-top: 1rem;
+      display: flex; // Botões lado a lado
       gap: 0.5rem;
     }
 
-    // Classe base para os botões dos cards
+    // Classe base para os botões
     .btn-local {
       font-family: $font-family-general;
       font-weight: 600;
-      font-size: 0.85rem; // Botões menores que o .btn principal
-      border-radius: 6px;
-      padding: 0.6rem 0.5rem; // Padding menor
+      font-size: 0.85rem;
+      border-radius: 50px; // Botões "pill"
+      padding: 0.6rem 1rem;
       text-align: center;
       text-decoration: none;
       transition: all 0.3s ease;
-      border: 1px solid $terciary-color;
+      border: 1px solid $secondary-color; // Borda marrom-bege
     }
 
     // Botão Primário (Preenchido)
     .btn-local-primary {
-      background-color: $terciary-color;
-      color: $primary-color;
+      background-color: $secondary-color; // Fundo marrom-bege
+      color: $primary-color; // Texto bege claro
 
       &:hover {
-        background-color: darken($terciary-color, 5%);
-        color: #fff;
+        background-color: darken($secondary-color, 5%);
+        border-color: darken($secondary-color, 5%);
       }
     }
 
     // Botão Secundário (Vazado)
     .btn-local-secondary {
       background-color: transparent;
-      color: $terciary-color;
+      color: $secondary-color; // Texto marrom-bege
 
       &:hover {
-        background-color: $terciary-color;
+        background-color: $secondary-color;
         color: $primary-color;
       }
     }
-  }
-
-  // Círculo da Esquerda
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 1; // Fica atrás do .container
-    width: 250px;  // Ajuste o tamanho conforme desejar
-    height: 250px; // Ajuste o tamanho conforme desejar
-    background-color: $terciary-color; // A cor marrom
-    border-radius: 50%;
-
-    // Posicionamento (ex: meio da tela, metade para fora)
-    top: 30%;
-    left: -125px; // Metade da largura para fora
-    transform: translateY(-50%); // Centraliza verticalmente
-  }
-
-  // Círculo da Direita
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 1; // Fica atrás do .container
-    width: 250px;  // Ajuste o tamanho conforme desejar
-    height: 250px; // Ajuste o tamanho conforme desejar
-    background-color: $terciary-color; // A cor marrom
-    border-radius: 50%;
-
-    // Posicionamento (ex: meio da tela, metade para fora)
-    top: 70%;
-    right: -125px; // Metade da largura para fora
-    transform: translateY(-50%); // Centraliza verticalmente
   }
 }
 
