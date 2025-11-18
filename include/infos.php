@@ -50,24 +50,14 @@ $especialidades = [
 
 $locais_aracaju = [
     [
-        'id' => 'uniccat',
-        'img_convenio' => 'aracaju/unicat.jpg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'unicat.png',
+        'id' => 'climedi',
+        'img_convenio' => 'aracaju/climedi.jpg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'climedi.png',
         'tem_convenio' => true, // <-- ADICIONE AQUI
-        'alt' => 'Clínica Uniccat',
-        'titulo' => 'Uniccat',
-        'endereco' => 'Av. Gonçalo Rolemberg Leite, 1813 - Luzia, Aracaju - SE, 49040-280',
-        'telefone' => '(79) 3211-9007'
-    ],
-    [
-        'id' => 'horizonte',
-        'img_convenio' => 'aracaju/horizonte.jpg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'jardins.png',
-        'tem_convenio' => false, // <-- ADICIONE AQUI
-        'alt' => 'Clínica Horizonte Jardins',
-        'titulo' => 'Horizonte Jardins',
-        'endereco' => 'Av. Dr. José Machado de Souza, 49 - Jardins, Aracaju - SE, 49025-740',
-        'telefone' => '(79) 3251-1140'
+        'alt' => 'CLIMEDI',
+        'titulo' => 'CLIMEDI',
+        'endereco' => 'Av. Barão de Maruim, 570 - Suíça, Aracaju - SE, 49010-340',
+        'telefone' => '(79) 2107-9800'
     ],
     [
         'id' => 'hospim',
@@ -83,22 +73,22 @@ $locais_aracaju = [
 
 $locais_salvador = [
     [
-        'id' => 'auros',
-        'img_convenio' => 'salvador/auros.jpeg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'auros.png',
-        'alt' => 'Clínica Auros',
-        'titulo' => 'Clínica Auros',
-        'endereco' => 'Av. Princesa Isabel, 514 - sala 404 - Barra, Salvador - BA, 40130-155',
-        'telefone' => '(71) 3101-2605'
+        'id' => 'Clinica Clivale',
+        'img_convenio' => 'salvador/clivale.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'clivale.png',
+        'alt' => 'Clínica Clivale',
+        'titulo' => 'Clínica Clivale',
+        'endereco' => 'Rua Barão de Cotegipe, 36 - Calçada, Salvador - BA, 40411-001',
+        'telefone' => '(71) 3512-8500'
     ],
     [
-        'id' => 'cub',
-        'img_convenio' => 'salvador/cub.jpeg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'cub.png',
-        'alt' => 'Clínica CUB',
-        'titulo' => 'Clínica CUB',
-        'endereco' => 'Rua - Ladeira do Hospital, 248 - Nazaré, Salvador - BA, 40050-420',
-        'telefone' => '(71) 3243-2053'
+        'id' => 'Centro Médico Santa Barbara',
+        'img_convenio' => 'salvador/santa-barba.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'santa-barbara.png',
+        'alt' => 'Centro Médico Santa Barbara',
+        'titulo' => 'Centro Médico Santa Barbara',
+        'endereco' => 'R. Barros Falcão, 365 - Matatu, Salvador - BA, 40255-370',
+        'telefone' => '(71) 3233-3315'
     ],
     [
         'id' => 'saudemais',
@@ -108,6 +98,24 @@ $locais_salvador = [
         'titulo' => 'Clínica Saúde Mais',
         'endereco' => 'R. Prof. Agroriniano de Barros, 228 - Caixa d\'Água, Salvador - BA, 40323-010',
         'telefone' => '(71) 3241-3241'
+    ],
+    [
+        'id' => 'clinica-da-mulher',
+        'img_convenio' => 'salvador/saudemais.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'clinica-da-mulher.png',
+        'alt' => 'Clínica da Mulher',
+        'titulo' => 'Clínica da Mulher',
+        'endereco' => 'R. Eduardo José dos Santos, 147 - 1006 - Federação, Salvador - BA, 40210-755',
+        'telefone' => '(71) 3237-2633'
+    ],
+    [
+        'id' => 'hospital-portugues',
+        'img_convenio' => 'salvador/hospitalportugues.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'hospital-portugues.png',
+        'alt' => 'Centro Médico Hospital Português ',
+        'titulo' => 'Centro Médico Hospital Português ',
+        'endereco' => 'Avenida Princesa Isabel, 914 - Barra Avenida, Salvador - BA, 40140-901',
+        'telefone' => '(71) 3203-5186'
     ]
 ];
 
@@ -119,12 +127,6 @@ $locais_salvador = [
 $depoimentos = [
     [
         'nome' => 'C. A.',
-        'idade' => '42 anos',
-        'local' => 'Aracaju - SE',
-        'depoimento' => 'Desde a primeira consulta, me senti acolhido e respeitado. O atendimento foi claro, humano e atencioso, transmitindo confiança em cada detalhe. Hoje sigo o tratamento com tranquilidade e gratidão por ter encontrado um profissional que realmente se importa com a minha saúde.'
-    ],
-    [
-        'nome' => 'Carlos Albuquerque',
         'idade' => '42 anos',
         'local' => 'Aracaju - SE',
         'depoimento' => 'Desde a primeira consulta, me senti acolhido e respeitado. O atendimento foi claro, humano e atencioso, transmitindo confiança em cada detalhe. Hoje sigo o tratamento com tranquilidade e gratidão por ter encontrado um profissional que realmente se importa com a minha saúde.'

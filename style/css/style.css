@@ -42,6 +42,7 @@ main {
 #hero {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 #hero .hero-content-container {
   position: relative;
@@ -106,7 +107,6 @@ main {
   background-image: url("../../img/bg-logo-hero.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50% 50%;
   width: 100%;
   height: 100%;
 }
@@ -351,7 +351,7 @@ main {
 }
 
 #agendamento {
-  background-color: #ece3da;
+  background-color: #ffffff;
 }
 #agendamento .container {
   position: relative;
@@ -380,24 +380,19 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 #agendamento .local-card .local-card-img-wrapper {
-  flex: 0 0 40%;
-  padding: 1rem;
-}
-@media (max-width: 767.98px) {
-  #agendamento .local-card .local-card-img-wrapper {
-    display: block;
-    padding: 0;
-  }
+  padding: 0;
 }
 #agendamento .local-card .local-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 @media (max-width: 767.98px) {
   #agendamento .local-card .local-card-img {
-    border-radius: 0;
+    height: 180px;
+    border-radius: 12px 12px 0 0;
   }
 }
 #agendamento .local-card .local-card-body {
@@ -405,7 +400,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  flex: 0 0 60%;
 }
 #agendamento .local-card .local-card-title {
   font-family: "Playfair Display", serif;
@@ -448,11 +442,11 @@ main {
   color: #ece3da;
 }
 #agendamento .local-card .btn-local-primary:hover {
-  background-color: #bc7e51;
-  border-color: #bc7e51;
+  background-color: rgb(187.9166666667, 126.4236111111, 80.5833333333);
+  border-color: rgb(187.9166666667, 126.4236111111, 80.5833333333);
 }
 #agendamento .local-card .btn-local-secondary {
-  background-color: transparent;
+  background-color: #ece3da;
   color: #c38c63;
 }
 #agendamento .local-card .btn-local-secondary:hover {
@@ -524,18 +518,14 @@ main {
   font-weight: 700;
   font-size: 1.1rem;
   color: #889577;
-  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
-  border-bottom: none;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
-}
-#depoimentos .testimonial-card .testimonial-header-logo {
-  height: 24px;
-  width: auto;
-  margin-right: 0.5rem;
+  border-bottom: 1px solid rgba(136, 149, 119, 0.3);
+  margin-bottom: 1rem;
 }
 #depoimentos .testimonial-card .card-body {
-  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   flex-grow: 1;
 }
 #depoimentos .testimonial-card .quote-icon {
@@ -549,29 +539,23 @@ main {
   margin-bottom: 0;
 }
 #depoimentos .testimonial-card .card-author {
-  background-color: transparent;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-#depoimentos .testimonial-card .card-author i {
-  font-size: 2.5rem;
-  color: #889577;
+#depoimentos .testimonial-card .card-author .testimonial-header-logo {
+  height: 24px;
+  width: auto;
+  margin-bottom: 0;
 }
-#depoimentos .testimonial-card .card-author div {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.4;
-}
-#depoimentos .testimonial-card .card-author div strong {
-  display: block;
+#depoimentos .testimonial-card .card-author strong {
   color: #889577;
   font-size: 1rem;
   font-weight: 700;
-}
-#depoimentos .testimonial-card .card-author div span {
-  display: block;
-  color: #c38c63;
-  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
 }
 #depoimentos .owl-dots {
   text-align: center;

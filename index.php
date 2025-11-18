@@ -53,19 +53,19 @@
 
                     <div class="col-lg-7">
                         <div class="hero-content">
-                            <h3 class="hero-subtitle">Urologia</h3>
+                            <h3 class="hero-title">Urologia</h3>
                             <h1 class="hero-title">Dra. Diandra Carvalhal</h1>
-                            <p class="hero-info">CRM/BA 123345 - RQE 1223</p>
+                            <p class="hero-info">CRM: 32941-BA / RQE: 27507</p>
                             <p class="hero-tagline">
                                 Cuidado especializado em urologia com dedicação e humanidade.
                             </p>
-                            <a href="#agendamento" class="btn-hero">
+                            <a href="https://wa.me/+557197103059" target="_blank" class="btn-hero">
                                 <i class="bi bi-whatsapp me-2"></i>Entre em contato
                             </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 ">
                     </div>
 
                 </div>
@@ -79,7 +79,7 @@
                             <div class="hero-bg-green"></div>
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 d-lg-block d-none">
                             <div class="hero-bg-image"></div>
                         </div>
 
@@ -130,7 +130,7 @@
                                 Minha especialidade é cuidado humano, tecnologia avançada e acompanhamento
                                 próximo para que você se sinta sempre seguro e acolhido.
                             </p>
-                            <a href="#agendamento" class="btn mt-auto">
+                            <a href="https://wa.me/+557197103059" target="_blank" class="btn mt-auto">
                                 Agende sua consulta
                             </a>
                         </div>
@@ -145,9 +145,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Confiança &amp; Cuidado</h5>
+                                <h5 class="card-title">Cuidado Humanizado, Foco em Você</h5>
                                 <p class="card-text">
-                                    “Cuidar da saúde urológica é mais do que tratar sintomas. É garantir bem-estar em cada fase da vida, com respeito, acolhimento e dedicação.” - Dra. Emily Ricaldi
+                                    “Minha missão é criar um ambiente seguro e de total confiança, onde você seja ouvida com respeito e acolhida sem julgamentos.” - Dra. Diandra Carvalhal
                                 </p>
                                 <a href="https://wa.me/+557197103059" class="btn" target="_blank">
                                     <i class="bi bi-whatsapp me-2"></i>Agende sua consulta
@@ -172,9 +172,9 @@
                                 <h2 class="sobremim-title">Dra. Diandra Carvalhal</h2>
                             </div>
                             <ul class="sobremim-list">
-                                <li>Graduação em Medicina pela Universidade Salvador - UNIFACS</li>
-                                <li>Residência Médica em Cirurgia Geral pelo Hospital Universitário da Universidade Federal de Sergipe – UFS/SE</li>
-                                <li>Residência Médica em Urologia pelas Obras Sociais Irmã Dulce - OSID/BA</li>
+                                <li>Médica formada pela Faculdade de Medicina da Bahia – FMB/UFBA (Conclusão em 2018).</li>
+                                <li>Urologia – Hospital Santo Antônio – Obras Sociais Irmã Dulce (Concluído em 2025).</li>
+                                <li>Aréa Básica Cirúrgica – Hospital Santa Izabel – Santa Casa de Misericórdia da Bahia (Concluído em 2020).</li>
                                 <li>Certificação em Cirurgia Robótica pela Intuitive.</li>
                             </ul>
                         </div>
@@ -293,18 +293,17 @@
             <div class="container">
                 <div class="row align-items-center">
 
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="depoimentos-title">o que meus pacientes<br>podem te contar?</h2>
+                    <div class="col-12 mb-5 text-center">
+                        <h2 class="depoimentos-title">A voz de quem confia</h2>
                         <p class="depoimentos-text">
-                            Relatos reais que refletem cuidado, dedicação e confiança em cada etapa do
-                            tratamento. Estou pronta para cuidar de você também, entre em contato!
+                            Histórias reais de uma parceria baseada em respeito e atenção em cada etapa do tratamento. A sua jornada de saúde é minha prioridade. Vamos começar? Agende sua consulta!
                         </p>
 
                         <a href="https://wa.me/+557197103059" target="_blank" class="link-agendamento"> <i class="bi bi-calendar-check me-2"></i>Agende sua consulta
                         </a>
                     </div>
 
-                    <div class="col-lg-8">
+                    <div class="col-12">
                         <div class="owl-carousel owl-theme">
 
                             <?php
@@ -314,8 +313,11 @@
                                 <div class="item">
                                     <div class="testimonial-card">
                                         <div class="card-header">
-                                            <img src="img/logo-nav.png" alt="" class="testimonial-header-logo">
-                                            Dra. Emily Ricaldi
+                                            <i class="bi bi-person-circle me-3"></i>
+                                            <div>
+                                                <strong><?= htmlspecialchars($depoimento['nome']) ?>, <?= htmlspecialchars($depoimento['idade']) ?></strong>
+                                                <span><?= htmlspecialchars($depoimento['local']) ?></span>
+                                            </div>
                                         </div>
                                         <div class="card-body">
                                             <i class="bi bi-quote quote-icon"></i>
@@ -324,11 +326,8 @@
                                             </p>
                                         </div>
                                         <div class="card-author">
-                                            <i class="bi bi-person-circle me-3"></i>
-                                            <div>
-                                                <strong><?= htmlspecialchars($depoimento['nome']) ?>, <?= htmlspecialchars($depoimento['idade']) ?></strong>
-                                                <span><?= htmlspecialchars($depoimento['local']) ?></span>
-                                            </div>
+                                            <img src="img/logo-nav.png" alt="" class="testimonial-header-logo">
+                                            <strong>Dra. Diandra</strong>
                                         </div>
                                     </div>
                                 </div>

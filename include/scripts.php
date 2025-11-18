@@ -16,7 +16,7 @@
                     items: 1    // Mostra 1 item
                 },
                 992:{         // Em telas 'lg' (desktop)
-                    items: 2    // Mostra 2 itens, como no design
+                    items: 3    // Mostra 2 itens, como no design
                 }
             }
         });

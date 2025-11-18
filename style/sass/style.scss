@@ -45,21 +45,20 @@ main {
 
 
 #hero {
-  position: relative; // Contexto para o wrapper de fundo
-  overflow: hidden;   // Previne scroll
-
-  // Wrapper do CONTEÚDO (fica na frente)
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   .hero-content-container {
     position: relative;
     z-index: 2; // Na frente do fundo
   }
 
-  // Bloco de texto (dentro do .col-lg-7 do container)
-  .hero-content {
-    color: #ffffff; // Texto claro
-    padding: 3rem 0; // Padding vertical, sem padding horizontal (o container cuida disso)
 
-    // ... (Copie todas as regras de fonte/cor que já fizemos) ...
+  .hero-content {
+    color: #ffffff;
+    padding: 3rem 0;
+
+
     .hero-subtitle {
       font-family: $font-family-general;
       font-size: 36px;
@@ -121,7 +120,6 @@ main {
     background-image: url('../../img/bg-logo-hero.png'); // Logo sutil
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 50% 50%;
     width: 100%;
     height: 100%;
   }
@@ -433,7 +431,7 @@ main {
 // ===============================================
 
 #agendamento {
-  background-color: $primary-color; // Fundo bege claro
+  background-color: #ffffff; // Fundo bege claro
   // Removemos a imagem de fundo e os círculos laterais
   // para um visual mais limpo, como o da imagem.
 
@@ -468,24 +466,26 @@ main {
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
-    // Wrapper da imagem (esquerda)
+    // Wrapper da imagem (col-md-5)
     .local-card-img-wrapper {
-      flex: 0 0 40%; // Ocupa 40% da largura
-      padding: 1rem; // Espaçamento para a imagem
-      @media (max-width: 767.98px) { // Breakpoint 'md' do Bootstrap
-        display: block; // No mobile, volta a ser um bloco normal
-        padding: 0;     // Remove o padding no mobile
-      }
+      padding: 0; // <-- 1. Remove o padding que estava causando o espaço
     }
 
     .local-card-img {
+      // 2. Faz a imagem se comportar como "background-size: cover"
       width: 100%;
-      height: 100%; // Ocupa 100% da altura do wrapper
+      height: 100%;
       object-fit: cover;
-      border-radius: 8px; // Borda arredondada na imagem
+
+      // 3. Arredonda os cantos da imagem para combinar com o card
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+
+      // 4. Correção para o mobile (quando empilha)
       @media (max-width: 767.98px) {
-        border-radius: 0; // Remove a borda no mobile
-        // A imagem vai se ajustar ao 'border-radius' do card pai
+        height: 180px; // Define uma altura fixa para a imagem no mobile
+        // Arredonda só os cantos de cima, pois ela fica no topo
+        border-radius: 12px 12px 0 0;
       }
     }
 
@@ -495,7 +495,6 @@ main {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      flex: 0 0 60%; // Ocupa 60% da largura
     }
 
     .local-card-title {
@@ -553,7 +552,7 @@ main {
 
     // Botão Secundário (Vazado)
     .btn-local-secondary {
-      background-color: transparent;
+      background-color: $primary-color;
       color: $secondary-color; // Texto marrom-bege
 
       &:hover {
@@ -633,7 +632,7 @@ main {
     box-shadow: none;
     display: flex;
     flex-direction: column;
-    height: 100%; // Ocupa a altura do .item
+    height: 100%;
     width: 100%;
 
     .card-header {
@@ -641,31 +640,19 @@ main {
       font-weight: 700;
       font-size: 1.1rem;
       color: $terciary-color;
-      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
-      border-bottom: none;
+      padding: 1.5rem;
       display: flex;
       align-items: center;
-    }
-
-    .testimonial-header-logo {
-      height: 24px;
-      width: auto;
-      margin-right: 0.5rem;
+      border-bottom: 1px solid rgba($terciary-color, 0.3);
+      margin-bottom: 1rem;
     }
 
     .card-body {
-      padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-      // border-bottom: none; // <-- REMOVIDO DAQUI
-
-      // ===============================================
-      // CORREÇÃO 1: ALTURA UNIFORME
-      // ===============================================
-      flex-grow: 1; // <-- ESTA É A CORREÇÃO PRINCIPAL
-      // Isso faz o .card-body crescer, empurrando o .card-author para o fundo
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      flex-grow: 1;
     }
 
     .quote-icon {
-
       color: $terciary-color;
     }
 
@@ -678,30 +665,25 @@ main {
     }
 
     .card-author {
-      background-color: transparent;
-      padding: 1.5rem;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
       display: flex;
-      align-items: center;
-      i {
-        font-size: 2.5rem;
-        color: $terciary-color;
+      // --- ATUALIZAÇÃO: Para colocar o logo ao lado do nome ---
+      flex-direction: row; // Muda para linha
+      align-items: center; // Alinha verticalmente no centro
+      justify-content: center; // Centraliza horizontalmente o grupo
+      gap: 0.5rem; // Espaço entre o logo e o nome
+
+      .testimonial-header-logo {
+        height: 24px;
+        width: auto;
+        margin-bottom: 0; // Remove o margin-bottom anterior
       }
 
-      div {
+      strong {
+        color: $terciary-color;
+        font-size: 1rem;
+        font-weight: 700;
         font-family: $font-family-general;
-        line-height: 1.4;
-
-        strong {
-          display: block;
-          color: $terciary-color;
-          font-size: 1rem;
-          font-weight: 700;
-        }
-        span {
-          display: block;
-          color: $secondary-color;
-          font-size: 0.9rem;
-        }
       }
     }
   }
