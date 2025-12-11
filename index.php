@@ -173,8 +173,8 @@
                             </div>
                             <ul class="sobremim-list">
                                 <li>Médica formada pela Faculdade de Medicina da Bahia – FMB/UFBA (Conclusão em 2018).</li>
-                                <li>Urologia – Hospital Santo Antônio – Obras Sociais Irmã Dulce (Concluído em 2025).</li>
                                 <li>Aréa Básica Cirúrgica – Hospital Santa Izabel – Santa Casa de Misericórdia da Bahia (Concluído em 2020).</li>
+                                <li>Urologia – Hospital Santo Antônio – Obras Sociais Irmã Dulce (Concluído em 2025).</li>
                                 <li>Certificação em Cirurgia Robótica pela Intuitive.</li>
                             </ul>
                         </div>

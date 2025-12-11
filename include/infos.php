@@ -68,7 +68,17 @@ $locais_aracaju = [
         'titulo' => 'Hospital do Rim',
         'endereco' => 'R. Arauá, 92 - Centro, Aracaju - SE, 49010-330',
         'telefone' => '(79) 3211-9007'
-    ]
+    ],
+    [
+        'id' => 'horizonte',
+        'img_convenio' => '', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'jardins.png',
+        'tem_convenio' => false, // <-- ADICIONE AQUI
+        'alt' => 'Clínica Horizonte Jardins',
+        'titulo' => 'Horizonte Jardins',
+        'endereco' => 'Av. José Machado de Souza, 120 - sala 1031 - Jardins, Aracaju - SE, 49025-740',
+        'telefone' => '(79) 3251-1140'
+    ],
 ];
 
 $locais_salvador = [
@@ -135,7 +145,7 @@ $depoimentos = [
         'nome' => 'M. S.',
         'idade' => '35 anos',
         'local' => 'Salvador - BA',
-        'depoimento' => 'Profissional exemplar! A Dra. Emily foi muito atenciosa e paciente para explicar todo o procedimento, o que me deixou muito mais calma. Recomendo de olhos fechados.'
+        'depoimento' => 'Profissional exemplar! A Dra. Diandra foi muito atenciosa e paciente para explicar todo o procedimento, o que me deixou muito mais calma. Recomendo de olhos fechados.'
     ]
 ];
 

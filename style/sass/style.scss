@@ -133,6 +133,11 @@ main {
     height: 100%;
   }
 
+  @media(max-width: 1200px){
+    .hero-bg-image{
+      background-position: top
+    }
+  }
   // --- Responsividade ---
   @media (max-width: 991.98px) {
 
@@ -345,6 +350,12 @@ main {
     // A mágica do ângulo acontece aqui com clip-path
     // Você pode ajustar o valor '20%' para mudar a inclinação
     clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);  }
+
+  @media(max-width: 1400px){
+    .angled-background{
+      height: 92%;
+    }
+  }
 
   // Conteúdo de texto da esquerda
   .sobremim-content {
