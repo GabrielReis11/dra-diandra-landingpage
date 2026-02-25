@@ -126,6 +126,15 @@ $locais_salvador = [
         'titulo' => 'Centro Médico Hospital Português ',
         'endereco' => 'Avenida Princesa Isabel, 914 - Barra Avenida, Salvador - BA, 40140-901',
         'telefone' => '(71) 3203-5186'
+    ],
+    [
+        'id' => 'clinica-medjan',
+        'img_convenio' => 'salvador/medjan.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img' => 'medjan.webp',
+        'alt' => 'Clínica Medjan',
+        'titulo' => 'Clínica Medjan',
+        'endereco' => 'Av. Joana Angélica, 1074 - Nazaré, Salvador - BA, 40050-001',
+        'telefone' => '(71) 3322-1122'
     ]
 ];
 
