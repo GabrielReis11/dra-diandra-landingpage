@@ -356,9 +356,11 @@
                         <h5 class="modal-title" id="label-<?= htmlspecialchars($local['id']) ?>">Convênios - <?= htmlspecialchars($local['titulo']) ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <?php if($local['tem_convenio'] == true){ ?>
                     <div class="modal-body text-center">
                         <img src="img/convenios/<?= htmlspecialchars($local['img_convenio']) ?>" alt="Convênios - <?= htmlspecialchars($local['titulo']) ?>" class="img-fluid">
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
