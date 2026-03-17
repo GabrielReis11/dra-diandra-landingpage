@@ -84,7 +84,7 @@ $locais_aracaju = [
 $locais_salvador = [
     [
         'id' => 'Clinica Clivale',
-        'img_convenio' => 'salvador/clivale.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/clivale.png', // <-- CAMINHO COMPLETO AQUI
         'img' => 'clivale.png',
         'alt' => 'Clínica Clivale',
         'titulo' => 'Clínica Clivale',
@@ -93,7 +93,7 @@ $locais_salvador = [
     ],
     [
         'id' => 'Centro Médico Santa Barbara',
-        'img_convenio' => 'salvador/santa-barba.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/santa-barba.png', // <-- CAMINHO COMPLETO AQUI
         'img' => 'santa-barbara.png',
         'alt' => 'Centro Médico Santa Barbara',
         'titulo' => 'Centro Médico Santa Barbara',
@@ -102,7 +102,7 @@ $locais_salvador = [
     ],
     [
         'id' => 'saudemais',
-        'img_convenio' => 'salvador/saudemais.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/saudemais.png', // <-- CAMINHO COMPLETO AQUI
         'img' => 'saudemais.png',
         'alt' => 'Clínica Saúde Mais',
         'titulo' => 'Clínica Saúde Mais',
@@ -111,7 +111,7 @@ $locais_salvador = [
     ],
     [
         'id' => 'clinica-da-mulher',
-        'img_convenio' => 'salvador/saudemais.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/clinica-da-mulher.png', // <-- CAMINHO COMPLETO AQUI
         'img' => 'clinica-da-mulher.png',
         'alt' => 'Clínica da Mulher',
         'titulo' => 'Clínica da Mulher',
@@ -120,7 +120,7 @@ $locais_salvador = [
     ],
     [
         'id' => 'hospital-portugues',
-        'img_convenio' => 'salvador/hospitalportugues.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/hospitalportugues.png', // <-- CAMINHO COMPLETO AQUI
         'img' => 'hospital-portugues.png',
         'alt' => 'Centro Médico Hospital Português ',
         'titulo' => 'Centro Médico Hospital Português ',
