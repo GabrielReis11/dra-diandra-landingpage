@@ -199,52 +199,6 @@
 
                 <div class="row mb-4">
                     <div class="col-12 text-center">
-                        <h2 class="cidade-title">Aracaju</h2>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <?php foreach ($locais_aracaju as $local): ?>
-                        <div class="col-lg-6 mb-4">
-
-                            <div class="card local-card h-100">
-                                <div class="row g-0 h-100">
-
-                                    <div class="col-md-5 local-card-img-wrapper">
-                                        <img src="img/locais-atendimento/aracaju/<?= htmlspecialchars($local['img']) ?>"
-                                             alt="<?= htmlspecialchars($local['alt']) ?>" class="img-fluid local-card-img">
-                                    </div>
-
-                                    <div class="col-md-7">
-                                        <div class="card-body local-card-body">
-                                            <h5 class="local-card-title"><?= htmlspecialchars($local['titulo']) ?></h5>
-                                            <p class="local-card-info">
-                                                <i class="bi bi-geo-alt-fill me-2"></i><?= htmlspecialchars($local['endereco']) ?>
-                                            </p>
-                                            <p class="local-card-info">
-                                                <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($local['telefone']) ?>
-                                            </p>
-                                            <div class="local-card-buttons">
-                                                <a href="https://wa.me/557197103059" target="_blank" class="btn-local btn-local-primary">Agende sua consulta</a>
-
-                                                <?php if ($local['id'] != 'horizonte'): ?>
-                                                    <a href="#" class="btn-local btn-local-secondary"
-                                                       data-bs-toggle="modal"
-                                                       data-bs-target="#modal-<?= htmlspecialchars($local['id']) ?>">
-                                                        Consultar convênios
-                                                    </a>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-12 text-center">
                         <h2 class="cidade-title">Salvador</h2>
                     </div>
                 </div>
