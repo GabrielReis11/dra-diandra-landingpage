@@ -92,24 +92,6 @@ $locais_salvador = [
         'telefone' => '(71) 3512-8500'
     ],
     [
-        'id' => 'Centro Médico Santa Barbara',
-        'img_convenio' => 'salvador/santa-barbara.jpg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'santa-barbara.png',
-        'alt' => 'Centro Médico Santa Barbara',
-        'titulo' => 'Centro Médico Santa Barbara',
-        'endereco' => 'R. Barros Falcão, 365 - Matatu, Salvador - BA, 40255-370',
-        'telefone' => '(71) 3233-3315'
-    ],
-    [
-        'id' => 'saudemais',
-        'img_convenio' => 'salvador/saude-mais.jpg', // <-- CAMINHO COMPLETO AQUI
-        'img' => 'saudemais.png',
-        'alt' => 'Clínica Saúde Mais',
-        'titulo' => 'Clínica Saúde Mais',
-        'endereco' => 'R. Prof. Agroriniano de Barros, 228 - Caixa d\'Água, Salvador - BA, 40323-010',
-        'telefone' => '(71) 3241-3241'
-    ],
-    [
         'id' => 'clinica-da-mulher',
         'img_convenio' => 'salvador/clinica-da-mulher.jpeg', // <-- CAMINHO COMPLETO AQUI
         'img' => 'clinica-da-mulher.png',
