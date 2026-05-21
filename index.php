@@ -55,7 +55,8 @@
                         <div class="hero-content">
                             <h3 class="hero-title">Urologia</h3>
                             <h1 class="hero-title">Dra. Diandra Carvalhal</h1>
-                            <p class="hero-info">CRM: 32941-BA / RQE: 27507</p>
+                            <p class="hero-info">CRM: 32941-BA / RQE-BA: 27507</p>
+                            <p class="hero-info">CRM: 9018-BA / RQE-BA: 5866</p>
                             <p class="hero-tagline">
                                 Cuidado especializado em urologia com dedicação e humanidade.
                             </p>
