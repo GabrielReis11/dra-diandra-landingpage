@@ -83,8 +83,9 @@ $locais_aracaju = [
 
 $locais_salvador = [
     [
-        'id' => 'Clinica Clivale',
-        'img_convenio' => 'salvador/clivale.jpg', // <-- CAMINHO COMPLETO AQUI
+        'id' => 'clinica-clivale',
+        'img_convenio' => 'salvador/clivale.jpeg',
+        'tem_convenio' => true,
         'img' => 'clivale.png',
         'alt' => 'Clínica Clivale',
         'titulo' => 'Clínica Clivale',
@@ -93,7 +94,8 @@ $locais_salvador = [
     ],
     [
         'id' => 'clinica-da-mulher',
-        'img_convenio' => 'salvador/clinica-da-mulher.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/clinica-da-mulher.jpeg',
+        'tem_convenio' => true,
         'img' => 'clinica-da-mulher.png',
         'alt' => 'Clínica da Mulher',
         'titulo' => 'Clínica da Mulher',
@@ -102,7 +104,8 @@ $locais_salvador = [
     ],
     [
         'id' => 'hospital-portugues',
-        'img_convenio' => 'salvador/hospitalportugues.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/hospitalportugues.jpeg',
+        'tem_convenio' => true,
         'img' => 'hospital-portugues.png',
         'alt' => 'Centro Médico Hospital Português ',
         'titulo' => 'Centro Médico Hospital Português ',
@@ -111,7 +114,8 @@ $locais_salvador = [
     ],
     [
         'id' => 'clinica-medjan',
-        'img_convenio' => 'salvador/medjan.jpeg', // <-- CAMINHO COMPLETO AQUI
+        'img_convenio' => 'salvador/medjan.jpeg',
+        'tem_convenio' => true,
         'img' => 'medjan.webp',
         'alt' => 'Clínica Medjan',
         'titulo' => 'Clínica Medjan',
